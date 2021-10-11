@@ -1,0 +1,14 @@
+.header-block {
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header {
+  color: var(--text-primary-color);
+  font-family: 'Birthstone', cursive, Arial;
+  font-size: 50px;
+  font-weight: 400;
+}
