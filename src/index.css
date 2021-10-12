@@ -4,5 +4,6 @@
 :root {
   --background: #1c1c21;
   --text-primary-color: white;
-  --border-color: #828d8c ;
+  --border-color: #828d8c;
+  --caption-color: black;
 }

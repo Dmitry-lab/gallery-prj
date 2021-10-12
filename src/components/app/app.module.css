@@ -1,4 +1,4 @@
 .page {
   background-color: var(--background);
-  height: 100vh;
+  min-height: 100vh;
 }
