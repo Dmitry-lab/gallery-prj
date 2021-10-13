@@ -1,15 +1,33 @@
 export type TImage = {
-  id: string;
-  author: string;
+  id: number;
+  views: number;
+  downloads: number;
   url: string;
   isLiked: boolean;
 };
 
 export type TDetailImageInfo = {
-  id: string;
-  author: string;
-  url: string;
-  download_url: string;
-  width: number;
-  height: number;
-}
+  id: number;
+  pageURL: string;
+  type: string;
+  tags: string;
+  previewURL: string;
+  previewWidth: number;
+  previewHeight: number;
+  webformatURL: string;
+  webformatWidth: number;
+  webformatHeight: number;
+  largeImageURL: string;
+  fullHDURL: string;
+  imageURL: string;
+  imageWidth: number;
+  imageHeight: number;
+  imageSize: number;
+  views: number;
+  downloads: number;
+  likes: number;
+  comments: number;
+  user_id: number;
+  user: string;
+  userImageURL: string;
+};
