@@ -19,17 +19,20 @@ const Gallery: FC = () => {
     dispatch({ type: SET_FILTER})
   }
 
+  const buttonStyle = filtered ? `${styles.button} ${styles['button_active']}` : styles.button
+  const buttonText = filtered ? 'Все фото' : 'Только фото с лайками'
+
   return (
-    <div>
-      <button onClick={onFilterClickHandler}>Тольк фото с лайками</button>
-      <div className={styles.content}>
-        {viewedImages.length ?
-          viewedImages.map((image: TImage) => {
+    <div className={styles.gallery}>
+      <button className={buttonStyle} onClick={onFilterClickHandler}>{buttonText}</button>
+      {viewedImages.length ?
+        <div className={styles.content}>
+          {viewedImages.map((image: TImage) => {
             return <Card key={image.id} image={image}/>
-          }) :
-          <p>Нет изображений для просмотра</p>
-        }
-      </div>
+          })}
+        </div> :
+        <p className={styles.text}>Нет изображений для просмотра</p>
+      }
     </div>
   )
 }
